@@ -120,15 +120,14 @@
         }, [state]);
         return html`
           <div className=${styles.check}>
+            <${Field} ...${{ state, setState }} name="from" />
+            <${Field} ...${{ state, setState }} name="addr" Component="textarea" />
+            <${Field} ...${{ state, setState }} name="date" />
             <${Field} ...${{ state, setState }} name="shill" />
             <${Field} ...${{ state, setState }} name="amount" />
             <div className=${styles.centsWrap}><${Field} ...${{ state, setState }} name="cents" />⁄ₓₓ</div>
             <${Field} ...${{ state, setState }} name="amountText" />
-            <${Field} ...${{ state, setState }} name="date" />
             <${Field} ...${{ state, setState }} name="memo" />
-            <${Field} ...${{ state, setState }} name="from" />
-            <${Field} ...${{ state, setState }} name="addr" Component="textarea" />
-            <${Field} ...${{ state, setState }} name="date" />
             <div className=${styles.bankWrap}>
               a
               <div className=${styles.resizedInput}>
