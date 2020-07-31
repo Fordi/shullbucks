@@ -119,7 +119,7 @@
           history.replaceState(state, '', url.toString());
         }, [state]);
         return html`
-          <div className=${styles.check}>
+          <form spellchck="false" className=${styles.check}>
             <${Field} ...${{ state, setState }} name="from" />
             <${Field} ...${{ state, setState }} name="addr" Component="textarea" />
             <${Field} ...${{ state, setState }} name="date" />
@@ -141,7 +141,7 @@
               </div>
               c
             </div>
-          </div>
+          </form>
         `;
       };
       render(html`<${ShillCheck} />`, document.body);
